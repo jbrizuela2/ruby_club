@@ -14,12 +14,14 @@
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <%= link_to "Home", root_path, class: "navbar-item" %>
+      <%= link_to "Console", console_it_path, class: "navbar-item" %>
+      <%= link_to "Links", links_path, class: "navbar-item" %>
     </div>
-
+    
     <div class="navbar-end">
       <div class="navbar-item">
         <% if user_signed_in? %>
-          <%= link_to current_user.name || current_user.email, edit_user_path(current_user), class: "label"%>
+          <%= link_to current_user.name.blank? ? current_user.email : current_user.name, edit_user_path(current_user), class: "label"%>
         <% end %>
       </div>
 

@@ -1,1 +1,11 @@
 @import '~bulma/bulma';
+
+.cards-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .card{
+    margin: 3em 2em;
+    width: 300px;
+  }
+}

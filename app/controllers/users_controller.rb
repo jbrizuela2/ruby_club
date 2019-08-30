@@ -12,10 +12,10 @@ class UsersController < ApplicationController
       render :edit_form
     end
   end
-
+  
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :photo)
+    params.require(:user).permit(:name, :email, :photo, :description)
   end
 end
