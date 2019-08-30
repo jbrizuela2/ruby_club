@@ -1,0 +1,33 @@
+<section class="section">
+  <div class="container">
+    <%= form_for(current_user) do |f| %>
+      <div class="field">
+        <%= f.label :name, class: "label" %>
+        <div class="control">
+          <%= f.text_field :name, class: "input" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= f.label :email, class: "label" %>
+        <div class="control">
+          <%= f.text_field :email, class: "input" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= f.label "Photo url", class: "label" %>
+        <div class="control">
+          <%= f.text_field :photo, class: "input" %>
+        </div>
+      </div>   
+
+      <div class="field">
+        <div class="control">
+          <%= f.submit "Guardar", class: "button is-primary" %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</section>
